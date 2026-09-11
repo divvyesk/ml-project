@@ -1,0 +1,9 @@
+scenario,year,km_driven,fuel,transmission,owner,seller_type,car_age,predicted_price,predicted_price_formatted,change_vs_reference,change_pct
+Reference vehicle,2016,50000,Diesel,Manual,First Owner,Individual,4,531891.1694711164,"Rs 5,31,891",0.0,0.0
+Four years older,2012,50000,Diesel,Manual,First Owner,Individual,8,332135.83229642874,"Rs 3,32,136",-199755.33717468765,-37.55567842446293
+Four years newer,2020,50000,Diesel,Manual,First Owner,Individual,0,738051.5574923214,"Rs 7,38,052",206160.38802120497,38.75988169275298
+Double the mileage,2016,100000,Diesel,Manual,First Owner,Individual,4,507670.0096791743,"Rs 5,07,670",-24221.159791942104,-4.553781145873564
+Automatic transmission,2016,50000,Diesel,Automatic,First Owner,Individual,4,744850.4193965056,"Rs 7,44,850",212959.2499253892,40.03812474216188
+Second owner,2016,50000,Diesel,Manual,Second Owner,Individual,4,520316.63255549234,"Rs 5,20,317",-11574.536915624049,-2.1761099976773703
+Sold by a dealer,2016,50000,Diesel,Manual,First Owner,Dealer,4,573377.6946169551,"Rs 5,73,378",41486.525145838736,7.79981461002458
+Petrol instead of diesel,2016,50000,Petrol,Manual,First Owner,Individual,4,403187.1983362136,"Rs 4,03,187",-128703.9711349028,-24.197425812291453

@@ -1,0 +1,51 @@
+# Viva Question Bank
+
+Prepared for the Week 15 viva voce. Answers reflect the code in this repository, not generic theory.
+
+### 1. Why is this a regression problem and not classification?
+
+The target, selling_price, is a continuous rupee amount. A classification model would need arbitrary price buckets and would lose the ordering between them.
+
+### 2. Why fit on log1p(price) instead of price?
+
+Selling price spans Rs 20,000 to Rs 89,00,000 and is strongly right-skewed. Squared error on the rupee scale is dominated by a few luxury cars, so the model under-fits the mass of the market. Fitting in log space makes the error roughly proportional, which matches how car prices actually behave. Predictions are converted back with expm1, so every reported metric is still on the rupee scale.
+
+### 3. How do you know there is no data leakage?
+
+The train/test split happens before any feature is engineered. name_frequency is counted on training rows only. Imputation, scaling and encoding all sit inside the sklearn Pipeline, so they are fitted on training folds and applied to validation folds. The test set is scored once, after the final model has been chosen.
+
+### 4. Why is the model chosen on cross-validation rather than the test score?
+
+Picking the model with the best test score makes the test set part of the fitting procedure, and the reported score is then optimistic. Selection uses the mean R2 across 5-fold cross-validation inside the training split; the test set is only used for the final number.
+
+### 5. Why is car_age better than year?
+
+Depreciation depends on how old a car is, not on the calendar label. car_age also lets the model extrapolate to a model year it has not seen, as long as the age is in range.
+
+### 6. What is name_frequency and why is it stored with the model?
+
+It is the number of times an exact car name appears in the training data, a proxy for how common and liquid a model is. If it were recomputed at prediction time on a single row it would always be 1, which the model never saw during training. It is therefore saved in the model bundle and reused.
+
+### 7. Why does the reference year travel with the model?
+
+car_age is reference_year minus year. If the app used the current calendar year while the model was trained against 2020, every car would look several years older than it did during training and every prediction would be biased downwards.
+
+### 8. Did you reach the R2 above 0.90 stated in the objectives?
+
+Not on the rupee scale. The measured test R2 is reported in the final report. The 90-95% figures in the reviewed literature come from the nine-column CarDekho file that includes Present_Price, the current showroom price. Our eight-column file has no such column. On the log scale the model scores near 0.89, and excluding the most expensive one percent of vehicles it scores near 0.87, so the shortfall is concentrated in the luxury tail rather than spread across the data.
+
+### 9. Why keep name when it has 1,491 categories?
+
+The exact model line carries real pricing information that brand alone does not. Unseen categories are handled with handle_unknown='ignore', and model_family provides a lower-cardinality fallback signal for names seen only once or twice.
+
+### 10. Why were outliers not removed?
+
+The IQR flags are reported but not applied. A Rs 89 lakh car is a genuine listing, not a data-entry error, and deleting the expensive tail would raise R2 while making the model useless on exactly the vehicles it already handles worst. Instead the effect is quantified with R2_excl_top1pct.
+
+### 11. What would you do next?
+
+Obtain a schema with engine capacity, maximum power, mileage and seats, or a current-market-value column. Those are what separate a 0.75 model from a 0.95 one on this problem.
+
+### 12. How is the project reproducible?
+
+A single random seed in src/config.py, a fixed pipeline order, and one entry point: python scripts/run_all.py regenerates every CSV, plot, model and report from the raw CSV.

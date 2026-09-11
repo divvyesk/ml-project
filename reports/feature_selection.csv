@@ -1,0 +1,13 @@
+feature,kind,correlation_with_target,cardinality,decision,price_spread_ratio
+year,numeric,0.42426008154269546,27,keep,
+km_driven,numeric,-0.18735891936683924,770,keep,
+car_age,numeric,-0.42426008154269534,27,keep,
+km_per_year,numeric,0.15384312376138853,1074,keep,
+name_frequency,numeric,-0.15963493270700038,28,keep,
+name,categorical,,1491,keep,445.0
+brand,categorical,,29,keep,60.163333333333334
+model_family,categorical,,189,keep,254.28571428571428
+fuel,categorical,,5,keep,3.5735521755429036
+seller_type,categorical,,3,keep,1.935196374058177
+transmission,categorical,,2,keep,3.2085178691277707
+owner,categorical,,5,keep,5.26613651582995

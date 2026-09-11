@@ -1,0 +1,16 @@
+feature,category,count
+fuel,Diesel,2153
+fuel,Petrol,2123
+fuel,CNG,40
+fuel,LPG,23
+fuel,Electric,1
+seller_type,Individual,3244
+seller_type,Dealer,994
+seller_type,Trustmark Dealer,102
+transmission,Manual,3892
+transmission,Automatic,448
+owner,First Owner,2832
+owner,Second Owner,1106
+owner,Third Owner,304
+owner,Fourth & Above Owner,81
+owner,Test Drive Car,17

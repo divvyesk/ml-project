@@ -1,0 +1,9 @@
+parameter,value
+Total Records,4340
+Total Attributes,8
+Numerical Attributes,3
+Categorical/Text Attributes,5
+Target Variable,selling_price
+Missing Values,0
+Duplicate Records,763
+Unique Car Names,1491

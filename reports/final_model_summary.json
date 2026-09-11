@@ -1,0 +1,17 @@
+{
+  "final_model": "Stacked Ensemble",
+  "selection_rule": "highest mean R2 across 5-fold cross-validation on the training split",
+  "cv_r2_mean": 0.7985682430682204,
+  "metrics": {
+    "R2": 0.7229498555911682,
+    "MAE": 99279.62035921772,
+    "RMSE": 298742.5185383674,
+    "R2_log": 0.888079508433036,
+    "R2_excl_top1pct": 0.8589900194336391,
+    "MAPE": 20.836181433443222
+  },
+  "train_records": 2861,
+  "test_records": 716,
+  "reference_year": 2020,
+  "bundle_path": "/Users/divvye/Desktop/desktop/yaahvi-ml/final codebase/models/final_model.joblib"
+}

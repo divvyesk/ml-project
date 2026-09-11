@@ -1,0 +1,13 @@
+feature,importance,method
+brand,0.36893649813510676,permutation
+model_family,0.14126099409207585,permutation
+transmission,0.1282583158509789,permutation
+year,0.1256503577857248,permutation
+car_age,0.08123568641994042,permutation
+fuel,0.04408094064385226,permutation
+km_driven,0.020968513874789617,permutation
+seller_type,0.01782683835114789,permutation
+name,0.012419973209331992,permutation
+owner,0.010696244390400867,permutation
+name_frequency,0.004462750685472106,permutation
+km_per_year,0.0008552855170069762,permutation

@@ -1,0 +1,5 @@
+check,result
+invalid_manufacturing_years,0
+negative_km_driven,0
+non_numeric_values,0
+non_positive_selling_price,0

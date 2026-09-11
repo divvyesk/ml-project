@@ -1,0 +1,10 @@
+metric,value
+records,3577
+base_columns,8
+engineered_columns,5
+missing_values,0
+exact_duplicates,0
+unique_car_names,1491
+unique_brands,29
+unique_model_families,189
+reference_year,2020

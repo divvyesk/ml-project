@@ -1,0 +1,6 @@
+stage,records
+original_records,4340
+removed_missing_or_non_numeric,0
+removed_invalid_values,0
+removed_exact_duplicates,763
+final_records,3577

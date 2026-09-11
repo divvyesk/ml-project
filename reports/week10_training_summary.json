@@ -1,0 +1,14 @@
+{
+  "best_baseline_model": "Ridge Regression",
+  "selection_rule": "highest cross-validated R2 on the training split",
+  "train_records": 2861,
+  "test_records": 716,
+  "reference_year": 2020,
+  "saved_models": [
+    "/Users/divvye/Desktop/desktop/yaahvi-ml/final codebase/models/baseline_linear_regression.joblib",
+    "/Users/divvye/Desktop/desktop/yaahvi-ml/final codebase/models/baseline_ridge_regression.joblib",
+    "/Users/divvye/Desktop/desktop/yaahvi-ml/final codebase/models/baseline_decision_tree.joblib",
+    "/Users/divvye/Desktop/desktop/yaahvi-ml/final codebase/models/baseline_random_forest.joblib",
+    "/Users/divvye/Desktop/desktop/yaahvi-ml/final codebase/models/baseline_xgboost.joblib"
+  ]
+}

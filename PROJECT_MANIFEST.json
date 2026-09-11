@@ -1,0 +1,52 @@
+{
+  "project": "Used Car Price Prediction Using Machine Learning",
+  "subject": "Foundation of Machine Learning (SEML3211)",
+  "branch": "MLAI5D",
+  "students": [
+    "Vaibhaw Ojha - 24SE02ML287",
+    "Yaahvi Parekh - 24SE02ML315"
+  ],
+  "faculty": [
+    "Mr. Aakash Anilkumar Gupta",
+    "Ms. Megha Patel"
+  ],
+  "coverage": "Weeks 1-15",
+  "dataset": {
+    "source": "https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho",
+    "file": "CAR DETAILS FROM CAR DEKHO (8 columns)",
+    "raw_path": "data/car_data_raw.csv",
+    "cleaned_path": "data/car_data_cleaned.csv",
+    "raw_rows": 4340,
+    "exact_duplicates_removed": 763,
+    "clean_rows": 3577,
+    "columns": [
+      "name",
+      "year",
+      "selling_price",
+      "km_driven",
+      "fuel",
+      "seller_type",
+      "transmission",
+      "owner"
+    ],
+    "target": "selling_price",
+    "present_price_available": false
+  },
+  "entry_point": "python scripts/run_all.py",
+  "weeks": {
+    "5": "scripts/week05_understanding.py",
+    "6": "scripts/week06_cleaning.py",
+    "7": "scripts/week07_eda.py",
+    "8": "scripts/week08_features.py",
+    "9": "scripts/week09_baseline.py",
+    "10": "scripts/week10_train.py",
+    "11": "scripts/week11_evaluate.py",
+    "12": "scripts/week12_tune.py",
+    "13": "scripts/week13_prototype_check.py and app.py",
+    "14": "scripts/week14_final_report.py",
+    "15": "scripts/week15_presentation.py"
+  },
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_folds": 5
+}

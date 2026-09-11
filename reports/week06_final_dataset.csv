@@ -1,0 +1,8 @@
+parameter,result
+Original records,4340
+Duplicate records removed,763
+Invalid records removed,0
+Missing/non-numeric removed,0
+Final cleaned records,3577
+Missing values after cleaning,0
+Original columns retained,8

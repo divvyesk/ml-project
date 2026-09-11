@@ -1,0 +1,6 @@
+feature,type,definition,rationale
+car_age,numeric,"reference_year - year, clipped at 0","Depreciation is driven by age, not by the raw year label."
+brand,categorical,First token of name,Brands hold value at very different rates.
+model_family,categorical,First two tokens of name,Lower-cardinality view of name; groups trims of one model.
+km_per_year,numeric,"km_driven / max(car_age, 1)",Separates a lightly used old car from a hard-driven new one.
+name_frequency,numeric,Count of the exact name in the training split,Proxy for how common (and how liquid) a model is.

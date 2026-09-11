@@ -1,0 +1,3 @@
+series,skewness
+selling_price,5.453918181903924
+log1p(selling_price),-0.022941910482959085
